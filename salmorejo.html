@@ -10,43 +10,57 @@
     body { font-family: 'Lato', sans-serif; background: #faf9f7; color: #2c2c2a; }
     header { text-align: center; padding: 60px 20px 40px; border-bottom: 1px solid #e8e4de; }
     header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 400; letter-spacing: 0.08em; }
-    header p { margin-top: 10px; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: #888; font-weight: 300; }
     nav { display: flex; justify-content: center; gap: 40px; padding: 20px; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; }
     nav a { color: #2c2c2a; text-decoration: none; }
     nav a:hover { color: #b5a898; }
+    .portada { width: 100%; height: 500px; object-fit: cover; display: block; }
     .container { max-width: 780px; margin: 0 auto; padding: 60px 20px; }
     .post-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #b5a898; margin-bottom: 14px; }
-    h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; margin-bottom: 10px; line-height: 1.3; }
-    .intro { font-size: 1.05rem; line-height: 1.8; color: #555; margin-bottom: 40px; font-style: italic; }
-    img { width: 100%; height: 380px; object-fit: cover; margin: 24px 0; }
-    img.small { height: 260px; }
-    h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin: 40px 0 16px; }
-    ul, ol { padding-left: 20px; }
-    ul li, ol li { font-size: 1rem; line-height: 1.9; color: #444; margin-bottom: 6px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 16px; line-height: 1.3; }
+    h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin: 50px 0 18px; border-bottom: 1px solid #e8e4de; padding-bottom: 10px; }
+    .intro { font-size: 1.05rem; line-height: 1.9; color: #555; margin-bottom: 16px; }
+    .destacado { font-size: 1.1rem; font-style: italic; color: #b5a898; margin: 20px 0 40px; line-height: 1.8; }
+    ul, ol { padding-left: 22px; }
+    ul li, ol li { font-size: 1rem; line-height: 2; color: #444; }
     .tip { background: #f3ede6; padding: 20px 24px; margin: 16px 0; border-left: 3px solid #b5a898; font-size: 0.95rem; line-height: 1.7; color: #555; }
+    .servir { background: #2c2c2a; color: #faf9f7; padding: 30px 32px; margin: 40px 0; }
+    .servir strong { display: block; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: #b5a898; margin-bottom: 10px; }
+    .servir p { font-size: 1rem; line-height: 1.8; color: #e8e4de; }
     .back { display: inline-block; margin-top: 50px; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #2c2c2a; text-decoration: none; border-bottom: 1px solid #2c2c2a; padding-bottom: 2px; }
     .back:hover { color: #b5a898; border-color: #b5a898; }
     footer { text-align: center; padding: 40px 20px; border-top: 1px solid #e8e4de; font-size: 0.75rem; letter-spacing: 0.1em; color: #aaa; margin-top: 60px; }
+
+    /* SLIDER */
+    .slider { position: relative; width: 100%; margin: 30px 0; overflow: hidden; background: #2c2c2a; }
+    .slider-track { display: flex; transition: transform 0.5s ease; }
+    .slider-track img { min-width: 100%; height: 420px; object-fit: cover; display: block; }
+    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(250,249,247,0.85); border: none; width: 44px; height: 44px; font-size: 1.2rem; cursor: pointer; color: #2c2c2a; display: flex; align-items: center; justify-content: center; }
+    .slider-btn:hover { background: #faf9f7; }
+    .slider-prev { left: 14px; }
+    .slider-next { right: 14px; }
+    .slider-dots { display: flex; justify-content: center; gap: 8px; padding: 14px 0; background: #2c2c2a; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: #888; cursor: pointer; border: none; }
+    .dot.active { background: #b5a898; }
   </style>
 </head>
 <body>
 
 <header>
   <h1>Berta Rex</h1>
-  <p>recetas &middot; vida &middot; estilo</p>
   <nav>
     <a href="index.html">Inicio</a>
     <a href="sobre-mi.html">Sobre mí</a>
   </nav>
 </header>
 
+<img class="portada" src="IMG_0049.jpeg" alt="Salmorejo saludable">
+
 <div class="container">
 
   <p class="post-meta">Sábado, 13 de junio de 2026 &nbsp;&middot;&nbsp; Recetas</p>
   <h2>Salmorejo saludable</h2>
-  <p class="intro">Esta receta me la enseñó mi madre. Sana, rápida y perfecta para cualquier día de verano.</p>
-
-  <img src="IMG_0049.jpeg" alt="Ingredientes del salmorejo">
+  <p class="intro">Esta receta me la enseñó mi madre y es uno de esos platos que nunca fallan en casa. Una receta nutritiva y fácil de preparar para cualquier día de verano.</p>
+  <p class="destacado">"Fresquito, sano y listo en minutos — solo necesitas una licuadora y ganas de disfrutar."</p>
 
   <h3>Ingredientes</h3>
   <ul>
@@ -59,53 +73,60 @@
     <li>1 cucharada de pimienta molida</li>
   </ul>
 
-  <img src="IMG_0050.jpeg" alt="Preparando los tomates">
-
   <h3>Preparación</h3>
   <ol>
     <li>Lava con abundante agua todos los tomates.</li>
     <li>En una tabla, quítale el corazón a los tomates.</li>
     <li>Corta cada tomate en 4 trozos y añádelos a la licuadora.</li>
-    <li>Lava y pela las zanahorias. Córtalas en trozos medianos para que sea más fácil licuarlas y añádelas a la licuadora.</li>
+    <li>Lava y pela las zanahorias. Córtalas en trozos medianos para facilitar el licuado y añádelas a la licuadora.</li>
     <li>Pela el diente de ajo, córtalo y asegúrate de quitarle el corazón.</li>
     <li>Añade la sal, la pimienta, el aceite y el vinagre.</li>
     <li>Licúa a máxima potencia durante 5 minutos.</li>
     <li>Refrigera un mínimo de 1 hora antes de servir.</li>
   </ol>
 
-  <img src="IMG_0053.jpeg" alt="El proceso">
-  <img src="IMG_0054.jpeg" alt="El proceso" class="small">
-  <img src="IMG_0056.jpeg" alt="El proceso" class="small">
-  <img src="IMG_0058.jpeg" alt="El proceso" class="small">
-  <img src="IMG_0060.jpeg" alt="El proceso" class="small">
-  <img src="IMG_0061.jpeg" alt="El proceso" class="small">
+  <h3>Galería</h3>
 
-  <img src="IMG_0062.jpeg" alt="Salmorejo listo">
+</div>
 
-  <div class="tip">
-    <strong>Para servir:</strong> acompáñalo con crutones o huevo duro. Para decorar, añade un poco más de sal en escamas y un chorrito de aceite de oliva por encima.
+<div class="slider">
+  <div class="slider-track" id="track">
+    <img src="IMG_0050.jpeg" alt="Preparando los tomates">
+    <img src="IMG_0053.jpeg" alt="El proceso">
+    <img src="IMG_0054.jpeg" alt="El proceso">
+    <img src="IMG_0056.jpeg" alt="El proceso">
+    <img src="IMG_0058.jpeg" alt="El proceso">
+    <img src="IMG_0060.jpeg" alt="El proceso">
+    <img src="IMG_0061.jpeg" alt="El proceso">
+    <img src="IMG_0062.jpeg" alt="Salmorejo listo">
+    <img src="IMG_0063.jpeg" alt="Salmorejo presentado">
   </div>
+  <button class="slider-btn slider-prev" onclick="mover(-1)">&#8592;</button>
+  <button class="slider-btn slider-next" onclick="mover(1)">&#8594;</button>
+  <div class="slider-dots" id="dots"></div>
+</div>
 
-  <img src="IMG_0063.jpeg" alt="Salmorejo presentado">
+<div class="container">
+
+  <div class="servir">
+    <strong>Para decorar y acompañar</strong>
+    <p>A mi padre le encanta añadirle un poco más de aceite y vinagre por encima — y la verdad es que tiene razón, le da un toque increíble. También le puedes poner crutones o huevo duro en trocitos. Pruébalo y cuéntame cuál es tu versión favorita.</p>
+  </div>
 
   <h3>Propiedades nutricionales</h3>
 
   <div class="tip">
     <strong>Tomates</strong> — Aportan vitaminas A, C y K, potasio y licopeno, un potente antioxidante que protege el corazón, reduce la inflamación, mejora la circulación y previene el envejecimiento celular.
   </div>
-
   <div class="tip">
     <strong>Zanahorias</strong> — Ricas en vitamina A y betacarotenos. Mejoran la visión, cuidan la piel, fortalecen el sistema inmunitario y protegen las células.
   </div>
-
   <div class="tip">
     <strong>Ajo</strong> — Antibiótico natural con propiedades antiinflamatorias y antimicrobianas.
   </div>
-
   <div class="tip">
     <strong>Aceite de oliva</strong> — Rico en grasas saludables (ácido oleico), polifenoles y vitamina E.
   </div>
-
   <div class="tip">
     <strong>Vinagre de manzana</strong> — Destaca por su contenido en ácido acético y enzimas naturales que favorecen la digestión.
   </div>
@@ -118,6 +139,30 @@
   © 2026 Berta Rex
 </footer>
 
+<script>
+  let actual = 0;
+  const track = document.getElementById('track');
+  const imgs = track.querySelectorAll('img');
+  const dotsEl = document.getElementById('dots');
+  const total = imgs.length;
+
+  imgs.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => irA(i);
+    dotsEl.appendChild(d);
+  });
+
+  function irA(n) {
+    actual = (n + total) % total;
+    track.style.transform = `translateX(-${actual * 100}%)`;
+    document.querySelectorAll('.dot').forEach((d, i) => d.className = 'dot' + (i === actual ? ' active' : ''));
+  }
+
+  function mover(dir) { irA(actual + dir); }
+
+  setInterval(() => mover(1), 4000);
+</script>
+
 </body>
 </html>
-
