@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salmorejo saludable — Berta Rex</title>
+  <title>Salmorejo — Berta Rex</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -13,13 +13,12 @@
     nav { display: flex; justify-content: center; gap: 40px; padding: 20px; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; }
     nav a { color: #2c2c2a; text-decoration: none; }
     nav a:hover { color: #b5a898; }
-    .portada { width: 100%; height: 500px; object-fit: cover; display: block; }
+    .portada { width: 100%; height: 420px; object-fit: cover; display: block; }
     .container { max-width: 780px; margin: 0 auto; padding: 60px 20px; }
     .post-meta { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #b5a898; margin-bottom: 14px; }
     h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 400; margin-bottom: 16px; line-height: 1.3; }
     h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin: 50px 0 18px; border-bottom: 1px solid #e8e4de; padding-bottom: 10px; }
-    .intro { font-size: 1.05rem; line-height: 1.9; color: #555; margin-bottom: 16px; }
-    .destacado { font-size: 1.1rem; font-style: italic; color: #b5a898; margin: 20px 0 40px; line-height: 1.8; }
+    .intro { font-size: 1.05rem; line-height: 1.9; color: #555; margin-bottom: 40px; }
     ul, ol { padding-left: 22px; }
     ul li, ol li { font-size: 1rem; line-height: 2; color: #444; }
     .tip { background: #f3ede6; padding: 20px 24px; margin: 16px 0; border-left: 3px solid #b5a898; font-size: 0.95rem; line-height: 1.7; color: #555; }
@@ -31,14 +30,15 @@
     footer { text-align: center; padding: 40px 20px; border-top: 1px solid #e8e4de; font-size: 0.75rem; letter-spacing: 0.1em; color: #aaa; margin-top: 60px; }
 
     /* SLIDER */
-    .slider { position: relative; width: 100%; margin: 30px 0; overflow: hidden; background: #2c2c2a; }
+    .slider-wrap { max-width: 780px; margin: 30px auto; padding: 0 20px; }
+    .slider { position: relative; overflow: hidden; background: #2c2c2a; border-radius: 2px; }
     .slider-track { display: flex; transition: transform 0.5s ease; }
-    .slider-track img { min-width: 100%; height: 420px; object-fit: cover; display: block; }
-    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(250,249,247,0.85); border: none; width: 44px; height: 44px; font-size: 1.2rem; cursor: pointer; color: #2c2c2a; display: flex; align-items: center; justify-content: center; }
+    .slider-track img { min-width: 100%; height: 300px; object-fit: cover; display: block; }
+    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(250,249,247,0.85); border: none; width: 38px; height: 38px; font-size: 1rem; cursor: pointer; color: #2c2c2a; display: flex; align-items: center; justify-content: center; }
     .slider-btn:hover { background: #faf9f7; }
-    .slider-prev { left: 14px; }
-    .slider-next { right: 14px; }
-    .slider-dots { display: flex; justify-content: center; gap: 8px; padding: 14px 0; background: #2c2c2a; }
+    .slider-prev { left: 10px; }
+    .slider-next { right: 10px; }
+    .slider-dots { display: flex; justify-content: center; gap: 8px; padding: 12px 0; background: #2c2c2a; }
     .dot { width: 6px; height: 6px; border-radius: 50%; background: #888; cursor: pointer; border: none; }
     .dot.active { background: #b5a898; }
   </style>
@@ -53,14 +53,13 @@
   </nav>
 </header>
 
-<img class="portada" src="IMG_0049.jpeg" alt="Salmorejo saludable">
+<img class="portada" src="IMG_0049.jpeg" alt="Salmorejo">
 
 <div class="container">
 
   <p class="post-meta">Sábado, 13 de junio de 2026 &nbsp;&middot;&nbsp; Recetas</p>
-  <h2>Salmorejo saludable</h2>
-  <p class="intro">Esta receta me la enseñó mi madre y es uno de esos platos que nunca fallan en casa. Una receta nutritiva y fácil de preparar para cualquier día de verano.</p>
-  <p class="destacado">"Fresquito, sano y listo en minutos — solo necesitas una licuadora y ganas de disfrutar."</p>
+  <h2>Salmorejo</h2>
+  <p class="intro">Esta receta me la enseñó mi madre y es uno de esos platos que nunca fallan en casa. Nutritiva, fácil y perfecta para cualquier día de verano.</p>
 
   <h3>Ingredientes</h3>
   <ul>
@@ -89,28 +88,30 @@
 
 </div>
 
-<div class="slider">
-  <div class="slider-track" id="track">
-    <img src="IMG_0050.jpeg" alt="Preparando los tomates">
-    <img src="IMG_0053.jpeg" alt="El proceso">
-    <img src="IMG_0054.jpeg" alt="El proceso">
-    <img src="IMG_0056.jpeg" alt="El proceso">
-    <img src="IMG_0058.jpeg" alt="El proceso">
-    <img src="IMG_0060.jpeg" alt="El proceso">
-    <img src="IMG_0061.jpeg" alt="El proceso">
-    <img src="IMG_0062.jpeg" alt="Salmorejo listo">
-    <img src="IMG_0063.jpeg" alt="Salmorejo presentado">
+<div class="slider-wrap">
+  <div class="slider">
+    <div class="slider-track" id="track">
+      <img src="IMG_0050.jpeg" alt="Preparando los tomates">
+      <img src="IMG_0053.jpeg" alt="El proceso">
+      <img src="IMG_0054.jpeg" alt="El proceso">
+      <img src="IMG_0056.jpeg" alt="El proceso">
+      <img src="IMG_0058.jpeg" alt="El proceso">
+      <img src="IMG_0060.jpeg" alt="El proceso">
+      <img src="IMG_0061.jpeg" alt="El proceso">
+      <img src="IMG_0062.jpeg" alt="Salmorejo listo">
+      <img src="IMG_0063.jpeg" alt="Salmorejo presentado">
+    </div>
+    <button class="slider-btn slider-prev" onclick="mover(-1)">&#8592;</button>
+    <button class="slider-btn slider-next" onclick="mover(1)">&#8594;</button>
+    <div class="slider-dots" id="dots"></div>
   </div>
-  <button class="slider-btn slider-prev" onclick="mover(-1)">&#8592;</button>
-  <button class="slider-btn slider-next" onclick="mover(1)">&#8594;</button>
-  <div class="slider-dots" id="dots"></div>
 </div>
 
 <div class="container">
 
   <div class="servir">
     <strong>Para decorar y acompañar</strong>
-    <p>A mi padre le encanta añadirle un poco más de aceite y vinagre por encima — y la verdad es que tiene razón, le da un toque increíble. También le puedes poner crutones o huevo duro en trocitos. Pruébalo y cuéntame cuál es tu versión favorita.</p>
+    <p>A mi padre le encanta añadirle un poco más de aceite y vinagre por encima. También le puedes poner crutones o huevo duro en trocitos.</p>
   </div>
 
   <h3>Propiedades nutricionales</h3>
@@ -148,21 +149,5 @@
 
   imgs.forEach((_, i) => {
     const d = document.createElement('button');
-    d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.onclick = () => irA(i);
-    dotsEl.appendChild(d);
-  });
-
-  function irA(n) {
-    actual = (n + total) % total;
-    track.style.transform = `translateX(-${actual * 100}%)`;
-    document.querySelectorAll('.dot').forEach((d, i) => d.className = 'dot' + (i === actual ? ' active' : ''));
-  }
-
-  function mover(dir) { irA(actual + dir); }
-
-  setInterval(() => mover(1), 4000);
-</script>
-
-</body>
-</html>
+    d.className = 'dot' + (i === 0 ? '
+                           
